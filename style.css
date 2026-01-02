@@ -225,6 +225,309 @@ section.rangecar {
         font-size: 40px;
     }
 }
+/* khadija section  */
+*{
+    background-color:#fff; 
+}
+.container {
+    padding: 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #0a0a0a;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #080707;
+    margin-bottom: 30px;
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+  
+}
+
+.filter-tab {
+    padding: 10px 20px;
+    border: 2px solid #c7bfbf;
+    background: rgb(235, 229, 229);
+    color: #beacac;
+    border-radius: 19px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-tab:hover {
+    background: #0e0d0d;
+    border-color: #0c0b0b;
+}
+
+.filter-tab.active {
+    background: #e0d6d6;
+    color: rgb(0, 0, 0);
+    border-color: #000000;
+}
+
+.container-fluid {
+    padding: 1px;
+}
+
+.row {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.col-lg-6 {
+    padding: 15px;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(12, 12, 12, 0.1);
+}
+
+.card {
+    position: relative;
+    height: 400px;
+}
+
+.card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.img a img {
+    position: absolute;
+    background: #fff;   
+    left: 0;
+    top: 16px;
+    right: 0;
+}
+.card .logo {
+    position: sticky;
+    top: 1%;
+    left: 10px;
+    z-index: 10;
+    background: transparent;
+    padding: 10px;
+    border-radius: 8px;
+}
+.paragraph {
+    padding: 10px;
+}
+
+.paragraph h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.paragraph p {
+    font-size: 18px;
+    line-height:1.5;
+    color: #000000;
+    
+}
+
+/* Alternate video left/right positions */
+.container-fluid:nth-child(odd) .row .col-lg-6:first-child {
+    order: 1;
+}
+
+.container-fluid:nth-child(odd) .row .col-lg-6:last-child {
+    order: 2;
+}
+
+.container-fluid:nth-child(even) .row .col-lg-6:first-child {
+    order: 2;
+}
+
+.container-fluid:nth-child(even) .row .col-lg-6:last-child {
+    order: 1;
+}
+
+@media (max-width: 992px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-lg-6 {
+        width: 100%;
+        padding: 10px;
+        order: 1 !important;
+    }
+    
+    .card {
+        height: 300px;
+    }
+    
+    .paragraph h1 {
+        font-size: 32px;
+    }
+    
+    .paragraph p {
+        font-size: 16px;
+    }
+}
+
+
+/* Logo Section Styles */
+.logo-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+/*logos-container */
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-item {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: white;
+    border: 3px solid #eaeaea;
+    position: relative;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #007bff;
+}
+
+.logo-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.logo-item img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Brand-specific border colors on hover */
+.hyundai:hover { border-color: #002c5f; }
+.lexus:hover { border-color: #000000; }
+.jaguar:hover { border-color: #000000; }
+.landrover:hover { border-color: #000000; }
+.mazda:hover { border-color: #a80421; }
+.subaru:hover { border-color: #003f87; }
+.kia:hover { border-color: #c21e30; }
+.volvo:hover { border-color: #003057; }
+.infiniti:hover { border-color: #000000; }
+.cadillac:hover { border-color: #000000; }
+.bugatti:hover { border-color: #000000; }
+.mclaren:hover { border-color: #ff8800; }
+.maserati:hover { border-color: #0c2340; }
+.rollsroyce:hover { border-color: #000000; }
+.dodge:hover { border-color: #d22630; }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .logos-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 logos per line on medium screens */
+        gap: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .logos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 logos per line */
+        gap: 25px;
+    }
+    
+    .logo-item {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 logos per line */
+        gap: 20px;
+    }
+    
+    .logo-item {
+        width: 100px;
+        height: 100px;
+        border-width: 2px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-container {
+        grid-template-columns: 1fr; /* 1 logo per line on mobile */
+        gap: 15px;
+        max-width: 300px;
+    }
+    
+    .logo-item {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+} 
+/* khadija section close */
     
     
    
