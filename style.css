@@ -556,6 +556,253 @@ section {
     color: rgb(8, 70, 70);
 }
 /* rubab section close */
+/* shehryar section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body {
+    background: #f2f4f7;
+    padding: 20px;
+}
+
+.contact {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* top  get touch ha */
+
+.top .bar {
+    flex: 1;
+    background: #0f355f;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    font-weight: 600;
+    min-width: 300px;
+}
+
+
+
+/* LEFT Contact Information */
+.left {
+    background: #e9edf2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h3 {
+    background: #0f355f;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.contact-info-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    flex: 1;
+}
+
+.info-box {
+    background: #fff;
+    border: 1px solid #d5dbe3;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.info-box i {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #0f355f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f355f;
+    font-size: 18px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.info-box:hover i {
+    background: #0f355f;
+    color: white;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #0f355f;
+    font-size: 15px;
+}
+
+/* RIGHT Contact Form */
+.right {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 14px;
+    
+}
+
+.row input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfd6df;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.row input:focus {
+    border-color: #0f355f;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(15, 53, 95, 0.1);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    border: 1px solid #cfd6df;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    transition: border 0.3s ease;
+    flex: 1;
+}
+
+textarea:focus {
+    border-color: #0f355f;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(15, 53, 95, 0.1);
+}
+
+.form-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+.captcha input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #0f355f;
+}
+
+button {
+    background-color: #0f355f;
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: #0c2b4d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 53, 95, 0.2);
+}
+
+/* Responsive tak moblie pr set ho*/ 
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top .bar {
+        min-width: 100%;
+    }
+
+    .wrapper {
+        margin: 20px auto;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .left,
+    .right {
+        padding: 20px;
+    }
+
+    .info-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .info-box i {
+        margin-bottom: 5px;
+    }
+}
+/* shehryar section close */
+
+
     
     
    
