@@ -528,6 +528,34 @@ section.rangecar {
     }
 } 
 /* khadija section close */
+
+/* rubab section */
+h1.hadding {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 30px 0px 30px 0px;
+    color: rgb(5, 71, 71);
+}
+.card-body.model {
+    position: absolute;
+    bottom: -1px;
+    color: #ffff;
+    font-size: 20px;
+}
+.row.row-cols-1.row-cols-md-3.g-4 {
+    margin: 0px 25px 0px 25px;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 10px 0px;
+    color: rgb(8, 70, 70);
+}
+/* rubab section close */
     
     
    
