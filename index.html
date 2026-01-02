@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title>CARVAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="Carvan logo.png">
+
+<body>
+    <section class="nav">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="Carvan logo.png" class="logo" alt="Logo">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#Cars">Cars</a></li>
+                <li><a href="#">PreOwned</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            </ul>
+
+        </nav>
+    </section>
+
+    <!-- HERO SLIDER -->
+    <section class="hero" id="Home">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <!-- ARROWS -->
+                    <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+                    <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+
+                    <!-- SLIDE 1 -->
+                    <div class="slide active">
+                        <video autoplay muted loop playsinline>
+                            <source src="slide 1.mp4"  type="video/mp4" >
+                        </video>
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <h1>Pure Performance</h1>
+                            <p>Engineered for speed</p>
+                            <a href="#">Explore Now</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="slide">
+                        <video autoplay muted loop playsinline>
+                            <source src="slide 2.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <h1>Luxury Redefined</h1>
+                            <p>Crafted with precision</p>
+                            <a href="#">View Models</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="slide">
+                        <video autoplay muted loop playsinline>
+                            <source src="slide 3.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <h1>Future Mobility</h1>
+                            <p>Innovation meets power</p>
+                            <a href="#">Buy now</a>
+                        </div>
+                    </div>
+                    <!-- SLIDE 4 -->
+                    <div class="slide">
+                        <video autoplay muted loop playsinline>
+                            <source src="slide 4.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <h1>Feel the Thrill</h1>
+                            <p>Where Style Meets Performance</p>
+                            <a href="#">Discover</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 5 -->
+                    <div class="slide">
+                        <video autoplay muted loop playsinline>
+                            <source src="slide 5.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay"></div>
+                        <div class="content">
+                            <h1>Drive the Future </h1>
+                            <p>Engineered for Excellence</p>
+                            <a href="#">View Range</a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- DOTS -->
+                    <div class="dots">
+                        <span onclick="goSlide(1)"></span>
+                        <span onclick="goSlide(2)"></span>
+                        <span onclick="goSlide(3)"></span>
+                        <span onclick="goSlide(4)"></span>
+                        <span onclick="goSlide(5)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RANGE OF CARS -->
+    <h1>Range of Cars</h1>
+    <section class="rangecar" id="Cars">
+
+        <div class="container">
+
+            <div class=" row about-stats">
+
+                <div class=" col stat ">
+                    <img alt="Automatic cars" height="50" loading="lazy"
+                        src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-automatic-a55403a87e9794f26240b3b89f81013ad5da5f46e9d180d4aa48fa6095852dce.svg">
+
+                    <p> Automatic </p>
+                </div>
+                <div class="stat">
+                    <img alt="Family Cars" height="50" loading="lazy"
+                        src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-family-cars-fec3195aed4ffcd6a294d54d8bf422b60ec2431a9f94b2f3815008194e4f90f5.svg">
+
+                    <p>Family </p>
+                </div>
+                <div class="stat">
+                    <img alt="5 Seater" height="50" loading="lazy"
+                        src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-5-seater-50fd38784cc34e3b1641489cafce16c5f214ea5b5ecea360166341426dfbc8a1.svg">
+
+
+                    <p>5 Seaterd</p>
+                </div>
+                <div class="stat">
+                    <img alt="Small cars" height="50" loading="lazy"
+                        src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-small-76d1a1d82cf4ce773dddced47e638ed7e59eb3d9a8362f59b12d137dbc799d3e.svg">
+
+                    <p> Small </p>
+                </div>
+                <div class="stat">
+                    <img alt="Big cars" height="50" loading="lazy"
+                        src="https://wsa4.pakwheels.com/assets/browse-more/car-ctg-big-6b31c1d95b31122cafda6dae9da15e51622912e74e19a487e8f1a79e36393264.svg">
+
+                    <p> Big </p>
+                </div>
+                <div class="stat">
+                    <img alt="Imported cars" height="50" loading="lazy"
+                        src="https://wsa2.pakwheels.com/assets/browse-more/car-ctg-imported-3466fdc5035c8c30983d01b4d25cd7cb97ca9272b5cc31e9df096d0b4a8a380f.svg">
+
+                    <p>Imported c</p>
+                </div>
+                <div class="stat">
+                    <img alt="Jeep" height="50" loading="lazy"
+                        src="https://wsa4.pakwheels.com/assets/browse-more/car-ctg-jeep-8637eea1c1efdabe93fdb517751bf0a725efe4c2ad84084baa302d5d8208cd82.svg">
+
+                    <p>Jeep</p>
+                </div>
+                <div class="stat">
+                    <img alt="Sports cars" height="50" loading="lazy"
+                        src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-sports-cbda1a45a53a4f6faad4ffdc707154994f36ee866a3fbfd4729f984102d12efc.svg">
+                    <p>Sports </p>
+                </div>
+                <div class="stat">
+                    <img alt="Van" height="50" loading="lazy"
+                        src="https://wsa4.pakwheels.com/assets/browse-more/car-bt-van-7889fe07e987359929c59b607f5148f73294ecaacc428b12e73a12bbffc6c210.svg">
+
+                    <p>Vans</p>
+                </div>
+                <div class="stat">
+                    <img alt="Electric cars" height="50" loading="lazy"
+                        src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-electric-7e1bd16bad3457cf7e05e47daa8e5a25acb81bb479c77f525eb2698a30db0d54.svg">>
+                    <p>Electric </p>
+                </div>
+                <div class="stat">
+                    <img alt="1000cc cars" height="50" loading="lazy"
+                        src="https://wsa1.pakwheels.com/assets/browse-more/car-ctg-1000cc-cars-4f09861499c5a24f39becd8e2baa667b3cea7d8116bdf951622f938b1186aa9e.svg">
+
+                    <p>1000cc </p>
+                </div>
+                <div class="stat">
+                    <img alt="1300cc cars" height="50" loading="lazy"
+                        src="https://wsa3.pakwheels.com/assets/browse-more/car-ctg-1300cc-cars-cdebceef95d218b5f15016955d38c99849c64cddae8c3a26c10f8340cbfa8b34.svg">
+                    <p>1300cc </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
