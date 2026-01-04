@@ -400,177 +400,115 @@ h1::after {
 /* rabab css close */
 /* khadija css */
 
-/* Updated Car Brands Section - 1 video left, 2 videos right */
-.section-header {
-    text-align: center;
-    margin: 80px 0 50px;
-}
+ .container-fluid {
+            padding: 0;
+        }
+        
+        .wrapper-1 {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .car-card {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+        }
+        
+        .car-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+        
+        .content-container {
+            max-width: 550px;
+            z-index: 10;
+        }
+        
+        .brand-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+        
+        .brand-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #ccc;
+            font-weight: 300;
+        }
+        
+        .discover-btn {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .discover-btn:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        .discover-btn:active {
+            transform: translateY(0);
+        }
+        
+        .discover-btn i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .discover-btn:hover i {
+            transform: translateX(5px);
+        }
+      
+       
+        
 
-.section-title {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-}
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: var(--secondary-color);
-}
-
-.section-subtitle {
-    font-size: 1.3rem;
-    color: #666;
-    font-style: italic;
-}
-
-.filter-tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 60px;
-}
-
-.filter-tab {
-    padding: 12px 30px;
-    background: white;
-    border: 2px solid var(--border-color);
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.filter-tab:hover,
-.filter-tab.active {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-}
-
-.container-fluid:nth-child(odd) .row .col-lg-6:first-child {
-    order: 1;
-}
-
-.container-fluid:nth-child(odd) .row .col-lg-6:last-child {
-    order: 2;
-}
-
-.container-fluid:nth-child(even) .row .col-lg-6:first-child {
-    order: 2;
-}
-
-.container-fluid:nth-child(even) .row .col-lg-6:last-child {
-    order: 1;
-}
-
-/* Updated Video Grid Layout */
-.video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.main-video {
-    grid-column: 1;
-}
-
-.side-videos {
-    grid-column: 2;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 30px;
-}
-
-.row.car-brand {
-    margin: 50px 0px 50px 0px;
-}
-
-.wrapper {
-    height: 100%;
-    perspective: 10px;
-}
-
-.card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease;
-    background: black;
-}
-
-.card:hover {
-    transform: scale(1.02) rotateY(5deg);
-}
-
-.card video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.9;
-}
-
-.card:hover video {
-    opacity: 1;
-}
-
-.card .img.logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-}
-
-.card .img.logo img {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border-radius: 10px;
-    transition: var(--transition);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card .img.logo:hover img {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.paragraph {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 20px;
-}
-
-.paragraph h1 {
-    text-align: left;
-    margin-bottom: 25px;
-    color: var(--primary-color);
-    font-size: 2.5rem;
-}
-
-.paragraph p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 30px;
-}
 
 /* khadija css close */
 /* rubab css  */
