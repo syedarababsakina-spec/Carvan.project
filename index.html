@@ -12,48 +12,67 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+</head>
 
 <body>
-    <section class="nav">
 
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container">
-                <div class="nav-left">
-                    <img src="Carvan logo.png" class="logo" alt="Logo">
-                </div>
-                <div class="collapse navbar-collapse font-weight-30px" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Cars">Cars</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Model">Model</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#PreOwned">PreOwned</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Brand">Brand</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Contact">Contact</a>
-                        </li>
-
-                    </ul>
-                </div>
-
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- Logo on LEFT -->
+        <div class="logo-container ">
+            <div class="logo-icon">
+                <i class="fas fa-car"></i>
             </div>
+            <div class="logo-text">CARVAN</div>
+        </div>
 
-    </section>
+        <!-- Mobile Toggle -->
+        <div class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </div>
 
+        <!-- Navigation Menu on RIGHT -->
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item">
+                <a href="#About" class="nav-link">
+                    <span>About Us</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Brands" class="nav-link">
+                    <span>Brands</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Rangs" class="nav-link">
+                    <span>Range of Cars</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Model" class="nav-link">
+                    <span>Modle</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Preowned" class="nav-link">
+                    <span>PreOwned Cars</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Contact" class="nav-link">
+                    <span>Contact Us</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
     <!-- HERO SLIDER -->
     <section class="hero" id="Home">
         <div class="container">
@@ -143,8 +162,9 @@
         </div>
     </section>
     <!-- RANGE OF CARS -->
-    <h1>Range of Cars</h1>
+    
     <section class="rangecar" id="Cars">
+        <h1>Range of Cars</h1>
 
         <div class="container">
 
@@ -242,8 +262,7 @@
                                     2,000 hp and advanced aerodynamic tech. Experience unparalleled performance and
                                     luxury in a vehicle designed for the future.
                                 </p>
-                                <a href="model.html"
-                                    target="_blank"><button class="discover-btn" id="discoverBtn">
+                                <a href="model.html" target="_blank"><button class="discover-btn" id="discoverBtn">
                                         EXPLORE MORE <i class="fas fa-arrow-right"></i>
                                     </button></a>
                             </div>
@@ -398,7 +417,7 @@
     <!-- khadija section close  -->
 
     <!-- rubab section -->
-    <section >
+    <section>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col-4">
                 <div class="card">
