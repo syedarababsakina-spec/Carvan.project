@@ -828,15 +828,15 @@ h1::after {
 /* khadija css close */
 /* sheriyar css  */
 /* Contact .Section */
-.contact-info {
-    flex: 1;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-span {
+ .car-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+/* span{
     color: var(--accent-color);
 }
 
@@ -890,7 +890,7 @@ span {
 button {
     margin-right: 12px;
     font-size: 20px;
-}
+} */
 
 /* sheriyar css close */
 /* <!-- aliyan  */
@@ -1120,13 +1120,134 @@ footer {
         font-size: 14px;
     }
 
-    /* Range of Cars */
-    .rangecar .stat {
+  /* Range of Cars */
+  @media (max-width: 768px) {
+    #PreOwned .col-4 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    #PreOwned .card {
+        margin-bottom: 20px;
+    }
+    
+    #PreOwned .hadding {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    #PreOwned .card-body p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    #PreOwned .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    #PreOwned .col-4 {
         flex: 0 0 50%;
         max-width: 50%;
-        text-align: center;
-        margin-bottom: 15px;
     }
+}
+
+/* Alignment Styles */
+#PreOwned .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Makes all cards same height */
+}
+
+#PreOwned .col-4 {
+    display: flex;
+}
+
+#PreOwned .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#PreOwned .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#PreOwned .card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#PreOwned .model {
+    flex-grow: 1;
+}
+
+#PreOwned .card-body p {
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+#PreOwned .card-title {
+    margin-bottom: 0;
+    color: #198754;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: auto; /* This pushes price to bottom */
+}
+
+#PreOwned .hadding {
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #198754;
+}
+
+/* Optional: Add hover effect */
+#PreOwned .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#PreOwned .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    #PreOwned .hadding {
+        font-size: 1.5rem;
+    }
+    
+    #PreOwned .card-img-top {
+        height: 180px;
+    }
+    
+    #PreOwned .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Large Devices */
+@media (min-width: 1200px) {
+    #PreOwned .card-img-top {
+        height: 220px;
+    }
+}
 
     /* Video Sections */
     .wrapper video {
