@@ -26,10 +26,91 @@ function goSlide(index) {
 /* Auto Slide */
 setInterval(nextSlide, 7000);
 
-/* Mobile Menu */
-function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('show');
-}
+// Mobile Menu Functionality
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenuBox = document.getElementById('mobileMenuBox');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        // Open mobile menu
+        mobileToggle.addEventListener('click', function() {
+            mobileMenuBox.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close mobile menu with close button
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenuBox.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close mobile menu with overlay click
+        menuOverlay.addEventListener('click', function() {
+            mobileMenuBox.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close mobile menu when clicking on links
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                mobileMenuBox.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                
+                // Update active state
+                mobileLinks.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Smooth scroll to section
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Close menu with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileMenuBox.classList.contains('active')) {
+                mobileMenuBox.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu on window resize (if resized to desktop)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 992 && mobileMenuBox.classList.contains('active')) {
+                mobileMenuBox.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scroll for desktop nav links
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
 /* Init */
 showSlide(0);
