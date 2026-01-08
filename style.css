@@ -359,7 +359,8 @@ main {
     height: 100vh;
     overflow: hidden;
     padding: 0px;
-    margin: 0%;
+    margin-bottom:5opx;
+    margin-top: -100px;
 
 }
 
@@ -666,6 +667,7 @@ h1::after {
     letter-spacing: 1px;
 }
 
+
 /* rabab css close */
 /* khadija css */
 
@@ -788,6 +790,7 @@ h1::after {
 
 
 /* khadija css close */
+
 /* rubab css  */
 /* Updated Cards with Text on Image */
 .row-cols-1 {

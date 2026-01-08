@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carvan | About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #000000;
+            --border-color: #dddddd;
+            --dark-colour: #851010;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
+            line-height: 1.6;
+        }
+        
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .about-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--dark-colour);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .header-line {
+            width: 100px;
+            height: 4px;
+            background-color: var(--dark-colour);
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        
+        .header-line::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            left: 50%;
+            transform: translateX(-50%);
+            top: 8px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+        
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            height: 500px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 70%, rgba(133, 16, 16, 0.3));
+            z-index: 1;
+        }
+        
+        .about-text h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--dark-colour);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .highlight-text {
+            background-color: rgba(133, 16, 16, 0.05);
+            border-left: 4px solid var(--dark-colour);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-text p {
+            font-style: italic;
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 0;
+        }
+        
+        .highlight-text i {
+            color: var(--dark-colour);
+            margin-right: 10px;
+        }
+        
+        /* Values Section */
+        .values-section {
+            background-color: #f9f9f9;
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .values-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            background-color: var(--primary-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--dark-colour);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(133, 16, 16, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--dark-colour);
+            font-size: 1.8rem;
+        }
+        
+        .value-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 60px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark-colour);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--primary-color);
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .cta-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--dark-colour);
+            color: var(--primary-color);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: 2px solid var(--dark-colour);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
+            
+            .about-header h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 50px 15px;
+            }
+            
+            .about-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .values-section {
+                padding: 40px 20px;
+            }
+            
+            .cta-section {
+                padding: 40px 20px;
+            }
+            
+            .cta-section h3 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .about-header h1 {
+                font-size: 1.9rem;
+            }
+            
+            .about-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-item {
+                min-width: 150px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="about-section">
+        <div class="about-header">
+            <h1>About Carvan</h1>
+            <div class="header-line"></div>
+            <p class="tagline">Redefining the car buying experience through innovation, transparency, and exceptional service</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Carvan Luxury Car Collection">
+                <div class="image-overlay"></div>
+            </div>
+            
+            <div class="about-text">
+                <h2>Our Journey</h2>
+                <p>Carvan began as a small, passionate team of automotive enthusiasts in downtown Detroit, dedicated to revolutionizing how people find and purchase their dream cars. We started with a simple mission: to make car buying transparent, enjoyable, and free from the traditional pressures of dealerships.</p>
+                
+                <p>It soon became clear that modern car buyers deserved more than just a transactional experience. They needed a partner who could guide them through every step—from discovering the perfect vehicle to financing and beyond. We evolved from a simple marketplace into a comprehensive automotive platform.</p>
+                
+                <div class="highlight-text">
+                    <p><i class="fas fa-quote-left"></i>At Carvan, we don't just sell cars—we match personalities with performance, lifestyles with luxury, and dreams with drive. We won't settle for 'OK' when 'extraordinary' is possible.</p>
+                </div>
+                
+                <p>Today, Carvan offers an end-to-end automotive solution: virtual test drives, AI-powered vehicle matching, transparent pricing, and personalized financing options. We're committed to helping drivers find their perfect vehicle as seamlessly as possible, backed by technology that puts the customer in control.</p>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-number">5,000+</span>
+                <span class="stat-label">Vehicles Sold</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Customer Satisfaction</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Brands Available</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Support</span>
+            </div>
+        </div>
+        
+        <!-- Values Section -->
+        <div class="values-section">
+            <h2 class="values-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Transparency</h3>
+                    <p>No hidden fees, no pressure tactics. We believe in honest pricing and clear communication throughout your car buying journey.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Quality First</h3>
+                    <p>Every vehicle undergoes a rigorous 150-point inspection to ensure safety, performance, and reliability.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Customer Focus</h3>
+                    <p>Your satisfaction drives everything we do. From selection to after-sales support, we're here for you.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Ready to Find Your Dream Car?</h3>
+            <p>Experience the Carvan difference. Browse our curated selection of premium vehicles, schedule a virtual test drive, or speak with our automotive experts today.</p>
+            <a href="#" class="cta-button">Explore Our Collection <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <script>
+        // Animate numbers on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const statsSection = document.querySelector('.stats-section');
+            
+            function animateNumber(element, target) {
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target + (element.textContent.includes('%') ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : '+');
+                    }
+                }, 30);
+            }
+            
+            // Intersection Observer for number animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        statNumbers.forEach(stat => {
+                            const target = parseInt(stat.textContent.replace(/[^0-9]/g, ''));
+                            animateNumber(stat, target);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(statsSection);
+            
+            // Add hover effect to value cards
+            const valueCards = document.querySelectorAll('.value-card');
+            valueCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.boxShadow = '0 8px 25px rgba(133, 16, 16, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.boxShadow = 'var(--shadow)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
