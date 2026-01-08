@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carvan | About Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -24,8 +25,8 @@
         
         body {
             font-family: 'Open Sans', sans-serif;
-            color: var(--secondary-color);
-            background-color: var(--primary-color);
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
             line-height: 1.6;
         }
         
@@ -356,6 +357,61 @@
     </style>
 </head>
 <body>
+     <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- Logo on LEFT -->
+        <div class="logo-container">
+            <div class="logo-icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <div class="logo-text">CARVAN</div>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Desktop Navigation Menu on RIGHT -->
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item">
+                <a href="#About Us" class="nav-link">
+                    <span>About</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Ranges" class="nav-link">
+                    <span>Ranges</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Model" class="nav-link">
+                    <span>Model</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#PreOwned" class="nav-link">
+                    <span>PreOwned Cars</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Brands" class="nav-link">
+                    <span>Brands</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Contact" class="nav-link">
+                    <span>Contact Us</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav> 
     <section class="about-section">
         <div class="about-header">
             <h1>About Carvan</h1>
@@ -440,6 +496,61 @@
             <a href="#" class="cta-button">Explore Our Collection <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
+     <footer>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-3">
+                        <h3>About Us</h3>
+                        <p>We are a company dedicated to creating amazing web experiences. Our mission is to deliver
+                            high-quality solutions that help businesses thrive in the digital world.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-3 footer">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Brands</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Cars</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Preowend</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> model</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3 footer">
+                        <h3>Contact Info</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Street Carvan Karachi, Pakistan</li>
+                            <li><i class="fas fa-phone"></i> +000 000 000 00</li>
+                            <li><i class="fas fa-envelope"></i> info@example.com</li>
+                            <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</li>
+                        </ul>
+                    </div>
+                    <div class="col-3 footer newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                        <form>
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Your Carvan. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </footer>
 
     <script>
         // Animate numbers on scroll
