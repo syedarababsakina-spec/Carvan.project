@@ -79,6 +79,12 @@ img {
     align-items: center;
     gap: 12px;
 }
+span {
+    color: #fff;
+}
+i.fas.fa-chevron-right {
+    color: #fff;
+}
 
 .logo-icon {
     width: 42px;
